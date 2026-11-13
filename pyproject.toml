@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nyc-taxi-mlops"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.4,<2",
+    "mlflow>=3.5,<4",
+    "pandas>=2.2,<4",
+    "pyarrow>=19,<25",
+    "scikit-learn>=1.7,<2",
+    "tzdata>=2025.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+taxi = "taxi_mlops.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["taxi_mlops*"]

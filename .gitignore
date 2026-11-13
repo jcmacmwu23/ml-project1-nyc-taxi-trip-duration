@@ -1,0 +1,13 @@
+.venv*/
+.local/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.DS_Store
+build/
+.env
+.env.*
+*.parquet
+*.sqlite*
+*.db
+dist/
